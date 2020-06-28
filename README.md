@@ -10,9 +10,10 @@
         :clipboard: Ejercicios evaluables Curso desarrollo aplicaciones Web    
 </h1>
 
-| #   | Ejercicio       | Descripción                                                                                                                                               |
-| --- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Cálcular Nomina | Realizar el cálculo de una nomina según especificaciones.<br />Incluye formulario introduccion de datos y tabla final formateada para mostrar resultados. |
+| #   | Ejercicio        | Descripción                                                                                                                                                                                                                                                                                                                        |
+| --- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Cálcular Nomina  | Realizar el cálculo de una nomina según especificaciones.<br />Incluye formulario introduccion de datos y tabla final formateada para mostrar resultados.                                                                                                                                                                          |
+| 2   | Registro horario | Realizar formaulario de control de horario (entrada/salida).<br/>Se selecciona/crea el nombre del empleado y se coloca automáticamente la fecha y hora de entrada, cuando se vuelve a seleccionar el empleado se coloca la hora de salida. Los datos son almacenados en el localStorage. <br/> Se utiliza Bootstra en vez de CSS3. |
 |     |
 
 ## :man: Autor

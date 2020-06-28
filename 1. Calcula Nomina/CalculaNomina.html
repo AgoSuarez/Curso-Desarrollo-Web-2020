@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Nomina</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Calcula Nomina</h1>
+    </header>
+
+    <section class="contenedor" id="formulario-recogida">
+        <form action="" method="GET" class="datosNominas">
+            <!-- Formulario introduccion de datos para posteriormente calcular nomina -->
+            <div class="grupo-form-col">
+                <!--Campos y etiqueta los muestro en una columna -->
+                <label for="nombre">Nombre Empleado</label>
+                <input type="text" name="nombre" id="nombre" minlength="3" required>
+            </div>
+            <div class="grupo-form-fila">
+                <!-- Campo y etiqueta los muestro en una fila -->
+                <div>
+                    <label for="horas">Horas trabajadas</label>
+                    <input type="number" name="horas" id="horas" min=0 step=0.1 required>
+                </div>
+                <div>
+                    <label for="salarioHora">Salario básico por hora</label>
+                    <input type="number" name="salarioHora" id="salarioHora" min=0 step=0.1 required>
+                </div>
+            </div>
+            <div class="botones">
+                <!--Contenedor de los botones -->
+                <input class="boton" type="button" value="Calcular" onclick="calculaNomina();">
+            </div>
+        </form>
+        <div id="error"></div><!-- Contenedor para mostrar los errors -->
+    </section>
+
+    <section class="contenedor" id="contenedor-nomina">
+        <section class="cabecera">
+            <article class="recuadro">
+                <p>Empresa Empre S.A.</p>
+                <p>Domicilio C/Grande, 16, Madrid</p>
+                <p>A12345678</p>
+                <P>Nº INS S.S. 28/1234567-89</P>
+            </article>
+            <article class="recuadro">
+                <p>Trabajador: <span id="trabajador"></span></p>
+                <p>Categoria: Oficial de primera</p>
+                <p>Antiguedad: 3 mar 08</p>
+                <p>DNI: 123456789A</p>
+                <p>Nº SS: 28/98765432-10</p>
+                <p>Más datos de S.S.</p>
+                <p>Periodo: Semanal</p>
+            </article>
+        </section>
+
+        <table class="tabla">
+            <thead>
+                <!--Cabecera-->
+                <th class="borde" colspan="3">Conceptos</th>
+                <th class="borde">Devengos</th>
+                <th class="borde">Deducc.</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- Salario Base -->
+                    <td class="col1">1</td>
+                    <td colspan="2">Salario Base</td>
+                    <td class="borde-lateral alinea-derecha" id="SalarioBase"></td>
+                    <td class="borde-lateral"></td>
+                </tr>
+                <tr>
+                    <!-- Horas Extras -->
+                    <td class="col1">2</td>
+                    <td>Pluses Horas extras</td>
+                    <td id="cantHoras" class="centrar"></td>
+                    <td class="alinea-derecha borde-lateral" id="PlusHoraExtra"></td>
+                    <td class="borde-lateral"></td>
+                </tr>
+                <tr>
+                    <!-- Deduccion contingencia Comunes -->
+                    <td class="col1">995</td>
+                    <td>Cotizacion contingencias comunes</td>
+                    <td class="centrar" id="PorContCom"></td>
+                    <td class="borde-lateral"></td>
+                    <td id="ContingenciaComun" class="borde-lateral alinea-derecha"></td>
+                </tr>
+                <tr>
+                    <!-- Deduccion Formacion Profesional -->
+                    <td class="col1">996</td>
+                    <td>Cotizacion formacion</td>
+                    <td class="centrar" id="PorFP"></td>
+                    <td class="borde-lateral"></td>
+                    <td id="ContingenciaFormacion" class="borde-lateral alinea-derecha"></td>
+                </tr>
+                <tr>
+                    <!-- Deduccion desempleo -->
+                    <td class="col1">997</td>
+                    <td>Cotizacion desempleo</td>
+                    <td class="centrar" id="PorDesem"></td>
+                    <td class="borde-lateral"></td>
+                    <td id="ContingenciaDesempleo" class="borde-lateral alinea-derecha"></td>
+                </tr>
+                <tr>
+                    <!-- Deduccion Seg. Social -->
+                    <td class="col1">998</td>
+                    <td>Cotizacion Seguridad Social</td>
+                    <td class="centrar" id="PorSS"></td>
+                    <td class="borde-lateral"></td>
+                    <td id="ContingenciaSegSoc" class="borde-lateral alinea-derecha"></td>
+                </tr>
+                <tr>
+                    <!-- Deduccion IRPF -->
+                    <td class="col1">999</td>
+                    <td>Tributacion IRPF</td>
+                    <td class="centrar" id="PorIRPF"></td>
+                    <td class="borde-lateral"></td>
+                    <td id="ContingenciaIRPF" class="borde-lateral alinea-derecha"></td>
+                </tr>
+                <!-- ultima fila en blanco -->
+                <tr class="alto borde-bajo">
+                    <td class="col1"></td>
+                    <td></td>
+                    <td></td>
+                    <td class="borde-lateral"></td>
+                    <td class="borde-lateral"></td>
+                </tr>
+                <!-- FIN ULTIMA FILA EN BLANCO -->
+                <tr class="alinea-derecha">
+                    <!-- total -->
+                    <td colspan="3">Remuneracion total</td>
+                    <td class="alinea-derecha" id="SalarioBruto"></td>
+                    <td></td>
+                </tr>
+                <tr class="alinea-derecha">
+                    <!-- Base cotizacion SEGSOC -->
+                    <td colspan="3">Base Cotizacion S.S</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="alinea-derecha">
+                    <!-- Base IRPF -->
+                    <td colspan="3">Base IRPF</td>
+                    <td class="alinea-derecha" id="SalarioBrutoIRPF"></td>
+                    <td></td>
+                </tr>
+                <tr class="alinea-derecha">
+                    <!-- deducciones -->
+                    <td colspan="3">Total deducciones</td>
+                    <td></td>
+                    <td class="alinea-derecha" id="deduccionesTotales"></td>
+                </tr>
+                <tr class="alinea-derecha">
+                    <!-- percibir -->
+                    <td colspan="3">Liquido a percibir</td>
+                    <td class="borde" id="TotalPercibir"></td>
+                    <td></td>
+                </tr>
+                <!-- Fecha -->
+                <tr>
+                    <td></td>
+                    <td colspan="2">Las Palmas, <span id="ponerFecha"></span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="linea">
+                    <!--Dejamos linea en blanco entre fecha y firma-->
+                    <td colspan=4></td>
+                </tr>
+                <tr>
+                    <!-- Firma -->
+                    <td></td>
+                    <td colspan="2">La empresa</td>
+                    <td>Recibi:</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <form action="">
+            <div class="botones">
+                <input class="boton" type="button" value="Nueva Nomina" onclick="nuevaNomina();">
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

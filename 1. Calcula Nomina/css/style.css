@@ -1,0 +1,131 @@
+/* ESTILOS CABEECERA */
+header {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+}
+
+/* Contenedor principal */
+.contenedor {
+  margin-left: 28%;
+  width: 44%;
+}
+
+/* FORMULARIO OBTENCION DATOS */
+.datosNominas {
+  border: 1px solid black;
+  margin-bottom: 0.7em;
+}
+
+.grupo-form-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0.7em;
+}
+
+.grupo-form-fila {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.7em;
+}
+
+.grupo-form-fila input {
+  width: 8em;
+}
+
+.botones {
+  padding: 1em;
+  text-align: center;
+}
+
+.boton {
+  padding: 0.4em 1em;
+  border-radius: 5px;
+  background-color: lightgreen;
+  border: 0;
+}
+
+.boton:hover {
+  color: white;
+  background-color: rgb(33, 246, 33);
+}
+
+#error {
+  visibility: hidden;
+  margin-left: 25%;
+  width: 50%;
+  background-color: rgba(255, 0, 0, 0.2);
+  color: red;
+  margin-top: 1em;
+  border: 1px solid red;
+  padding: 0.8em;
+}
+
+/* ESTILOS PARA LA NOMINA */
+.cabecera {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recuadro {
+  width: 48%;
+  padding-left: 0.1em;
+  margin-bottom: 0.5em;
+  border: 1px solid black;
+}
+
+.recuadro p {
+  margin: 0;
+}
+
+.tabla {
+  width: 100%;
+  margin-right: 1em;
+  border-collapse: collapse;
+}
+
+.borde {
+  border: 1px solid black;
+}
+
+.borde-lateral {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.borde-bajo {
+  border-bottom: 1px solid black;
+}
+
+.col1 {
+  border-left: 1px solid black;
+  text-align: right;
+  padding-right: 0.3em;
+}
+
+.centrar {
+  text-align: center;
+}
+
+.alinea-derecha {
+  text-align: right;
+}
+
+.alto {
+  height: 3em;
+}
+
+.linea {
+  height: 0.8em;
+}
+
+#contenedor-nomina {
+  display: none;
+}

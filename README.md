@@ -7,7 +7,7 @@
 # Curso-Desarrollo-Web-2020
 
 <h1 align="center"> 
-        :clipboard: Ejercicios evaluables Curso desarrollo Web    
+        :clipboard: Ejercicios evaluables Curso desarrollo aplicaciones Web    
 </h1>
 
 | #   | Ejercicio       | Descripción                                                                                                                                               |
@@ -15,14 +15,12 @@
 | 1   | Cálcular Nomina | Realizar el cálculo de una nomina según especificaciones.<br />Incluye formulario introduccion de datos y tabla final formateada para mostrar resultados. |
 |     |
 
-
 ## :man: Autor
+
 Interesado en nuevas tecnologías y, en especial, en el **mundo web**.<br />
 Gran parte de mi trayectoria ha está relacionada con diseño, configuración y gestión de redes, <br />
 administración de sistemas, y soporte a nivel hardware y software.
 Siempre en busca de **nuevos retos**.<br />
-
-
 
 ## :memo: Licencia
 

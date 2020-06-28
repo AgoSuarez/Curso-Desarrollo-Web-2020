@@ -10,9 +10,9 @@
         :clipboard: Ejercicios evaluables Curso desarrollo Web    
 </h1>
 
-| #   | Ejercicio       | Descripción                                                                                                                                              |
-| --- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Cálcular Nomina | Realizar el cálculo de una nomina según especificaciones.</br>Incluye formulario introduccion de datos y tabla final formateada para mostrar resultados. |
+| #   | Ejercicio       | Descripción                                                                                                                                               |
+| --- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Cálcular Nomina | Realizar el cálculo de una nomina según especificaciones.<br />Incluye formulario introduccion de datos y tabla final formateada para mostrar resultados. |
 |     |
 
 

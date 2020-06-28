@@ -10,11 +10,16 @@
         :clipboard: Ejercicios evaluables Curso desarrollo Web    
 </h1>
 
-:man: Autor
-Interesado en nuevas tecnologías y, en especial, en el mundo web.
-Gran parte de mi trayectoria ha está relacionada con diseño, configuración y gestión de redes, 
-administración de sistemas, y soporte a nivel hardware y software. Siempre en busca de nuevos retos.
 
-:memo: Licencia
-Copyright © 2020 AgoSuarez. 
-Este proyecto tiene licencia MIT MIT license
+## :man: Autor
+Interesado en nuevas tecnologías y, en especial, en el **mundo web**.<br />
+Gran parte de mi trayectoria ha está relacionada con diseño, configuración y gestión de redes, <br />
+administración de sistemas, y soporte a nivel hardware y software.
+Siempre en busca de **nuevos retos**.<br />
+
+
+
+## :memo: Licencia
+
+Copyright © 2020 [AgoSuarez](https://www.linkedin.com/in/agoney-v%C3%ADctor-su%C3%A1rez-ortega-052689187/). <br />
+Este proyecto tiene licencia MIT [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)

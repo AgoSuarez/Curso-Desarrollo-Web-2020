@@ -1,0 +1,66 @@
+main {
+  /* background-color: black; */
+  margin-left: 30%;
+  width: 40%;
+  background-color: white;
+  color: black;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+}
+.logo {
+  width: 30%;
+  margin-left: 70%;
+}
+p {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: justify;
+}
+.iconos {
+  width: 10%;
+}
+.sinfondo {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.flexherramienta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2em;
+  padding: 0.4em 0.8em;
+  background-color: lightgray;
+  border-radius: 20px;
+  border: 2px outset;
+}
+.flexherramienta2 {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 30%;
+}
+.iconos2 {
+  margin-left: 3%;
+  width: 12%;
+}
+
+button {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+button:hover {
+  background-color: BLUE;
+  color: white;
+}
+.ordenlupa {
+  font-size: 2.5em;
+  font-weight: bold;
+}

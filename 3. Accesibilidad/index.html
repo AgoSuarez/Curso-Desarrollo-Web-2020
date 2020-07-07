@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad Web</title>
+    <!-- Estilos bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+</head>
+
+<body>
+    <main id='fondo'>
+        <h1>Accesibilidad</h1>
+        <iframe height="315" src="https://www.youtube.com/embed/gQIKQO41pME"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p> La accesibilidad web es el grado con el que los contenidos puede ser utilizados o visitados por todas las
+            personas, independientemente de su posible discapcidad (físicas, intelectuales o técnicas). </p>
+        <p>Se han definido una serie de normas, así como de recomendaciones, para guiar a los diseñadores y
+            desarrolladores de páginas web en la creación de webs accesibles. Las normas han sido definidas basándose en
+            recomendaciones del W3C <a onclick="alert('Usted va a abandonar esta pagina')"
+                href="http://accesibilidadweb.dlsi.ua.es/?menu=criterios-2.0" title="Criterios accesibilidad W3C"
+                target="blank">(World wide web consortium)</a> que es un consorcio web internacional que trabaja para
+            definir estándares o pautas para conseguir el máximo rendimiento de la web.</p>
+        <img class="logo" src="./imagenes/logo.png" alt="Certificado Logo W3C AA" title="Certificado Logo W3C AA">
+        <article class="flexherramienta">
+            <!-- CARRUSEL -->
+            <div id="carouselExampleControls" class="carousel slide iconos" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item sinfondo active">
+                        <img src="./imagenes/textocolor1.png" class="d-block w-100" alt="Texto Negro Fondo Blanco"
+                            title="Texto Negro Fondo Blanco" onclick="cambiatema(1);">
+                    </div>
+                    <div class="carousel-item sinfondo">
+                        <img src="./imagenes/textocolor2.png" class="d-block w-100" alt="Texto Amarillo Fondo Azul"
+                            title="Texto Amarillo Fondo Azul" onclick="cambiatema(2);">
+                    </div>
+                    <div class="carousel-item sinfondo">
+                        <img src="./imagenes/textocolor3.png" class="d-block w-100" alt="Texto Blanco Fondo Negro"
+                            title="Texto Blanco Fondo Negro" onclick="cambiatema(3);">
+                    </div>
+                    <div class="carousel-item sinfondo">
+                        <img src="./imagenes/textocolor4.png" class="d-block w-100" alt="Texto Blanco Fondo Rojo"
+                            title="Texto Blanco Fondo Rojo" onclick="cambiatema(4);">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- AMPLIFICADOR DE LETRAS -->
+            <section class="flexherramienta2">
+                <img class="iconos2" src="./imagenes/lupamenos.png" alt="Disminuir texto" title="Disminuir texto"
+                    onclick="TamanoLetra(0)">
+                <span id="numero" class="ordenlupa">4</span>
+                <img class="iconos2" src="./imagenes/lupamas.png" alt="Aumentar texto" title="Aumentar texto"
+                    onclick="TamanoLetra(1)">
+            </section>
+
+            <!-- DISLEXIA -->
+            <section class="DYX" id="dislexia">
+                <button title="texto dislexia" onclick="dislexia()">DYX</button>
+            </section>
+
+
+        </article>
+    </main>
+    <!-- JS Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- Script propios -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

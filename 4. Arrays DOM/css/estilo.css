@@ -1,0 +1,34 @@
+header{
+    background-color: rgb(192, 236, 232);
+    color: rgb(98, 98, 98);
+    text-align: right;
+    padding: 0.7em;
+}
+header h1{
+    margin:0;
+    font-size: 50px;
+    font-weight: normal;
+}
+header h3{
+    margin:0;
+    font-size: 24px;
+    font-weight: normal;
+}
+.contenedor{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+area:hover{
+    cursor: pointer;
+}
+#derecho{
+    visibility: hidden;
+    flex: 1;
+    border: 1px solid lightskyblue;
+    padding: 0.5em;
+    text-align: justify;
+}
+#derecho h2{
+    color: rgb(19, 189, 189);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Objeto DOM</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Javascript</h1>
+    <h3>El Objeto DOM</h3>
+</header>
+<section class="contenedor">
+    <article class="izquierda">
+        <img src="./imagenes/esquemaDOM.jpg" usemap="#image-map">
+        <map name="image-map">
+            <area onclick="muestra(0);" alt="window" title="window" coords="15,42,139,15" shape="rect">
+            <area onclick="muestra(1);" alt="document" title="document" coords="97,61,222,92" shape="rect">
+            <area onclick="muestra(2);" alt="location" title="location" coords="99,184,224,213" shape="rect">
+            <area onclick="muestra(3);" alt="navigator" title="navigator" coords="99,269,223,295" shape="rect">
+        </map>
+    </article>
+
+    <article id="derecho">
+        <div>
+            <h2 id="tituloPrincipal"></h2>
+            <p id="concepto">
+            </p>
+        </div>
+        <div>
+        <h2>TOP 5 PROPIEDADES</h2>
+            <ul id="propiedades">
+            </ul>
+        </div>
+        <div>
+        <h2>TOP 5 METODOS</h2>
+            <ul id="metodos">
+            </ul>
+        </div>
+    </article>
+</section>    
+</body>
+</html>

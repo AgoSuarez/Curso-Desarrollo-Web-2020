@@ -1,0 +1,89 @@
+header{
+    background-color: rgb(192, 236, 232);
+    color: rgb(98, 98, 98);
+    text-align: right;
+    padding: 0.7em;
+}
+header h1{
+    margin:0;
+    font-size: 50px;
+    font-weight: normal;
+}
+header h3{
+    margin:0;
+    font-size: 24px;
+    font-weight: normal;
+}
+.contenedor{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* LADO IZQUIERDO */
+.izquierda{
+    flex:1.5;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.fila{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.cabecera{
+    flex:1;
+    text-align: center;
+    background-color: lightgray;
+    border: 1px solid grey;
+}
+.cabecera h3{
+    margin:0;
+    padding: 1em;
+}
+
+.fila-interna{
+    flex:1;
+    display:flex;
+    align-items: center;
+    border: 1px solid grey;
+}
+.contenedor-evento{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.evento{
+    flex:1; 
+    border: 1px solid grey;
+    padding: 0.4em;
+    display:flex; 
+    justify-content: center;
+    align-items: center; 
+}
+/* LADO DERECHO */
+#derecho{
+    visibility: hidden;
+    flex: 1;
+    border: 1px solid lightskyblue;
+    padding: 0.5em;
+    text-align: justify;
+}
+#derecho h2{
+    color: rgb(19, 189, 189);
+}
+.rojo{
+    color: red;
+}
+
+#nombre{
+    color:black;
+}
+
+.ready:hover{
+    cursor: pointer;
+}

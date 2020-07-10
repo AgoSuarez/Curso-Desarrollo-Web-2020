@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+<header>
+    <h1>Javascript</h1>
+    <h3>Eventos</h3>
+</header>
+<section class="contenedor">
+    <article class="izquierda">
+        <div class="fila">
+            <div class="cabecera">
+                <h3>Titulo de evento</h3>
+            </div>
+            <div class="cabecera">
+                <h3>Nombre con prefijo on (eliminar cuando proceda)</h3>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="fila-interna">
+                <h3>Relacionado con el raton</h3>
+            </div>
+            <div class="contenedor-evento">
+                <div class="evento ready" onclick="muestraEvento(this,0,0)">contextmenu</div>
+                <div class="evento ready" onclick="muestraEvento(this,0,1)">ondblclick</div>
+                <div class="evento">onclick</div>             
+                <div class="evento">onmousedown</div>
+                <div class="evento">onmouseenter</div>
+                <div class="evento">onmouseleave</div>
+                <div class="evento">onmousemove</div>
+                <div class="evento">onmouseover</div>
+                <div class="evento">onmouseout</div>
+                <div class="evento">onmouseup</div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="fila-interna">
+                <h3>Relacionado con el teclado</h3>
+            </div>
+            <div class="contenedor-evento">
+                <div class="evento ready" onclick="muestraEvento(this,1,2)"> onkeyup</div>
+                <div class="evento">onkeydown</div>             
+                <div class="evento">onkeypress</div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="fila-interna">
+                <h3>Relacionado con el formulario</h3>
+            </div>
+            <div class="contenedor-evento">
+                <div class="evento ready" onclick="muestraEvento(this,2,3)"> onselect</div>
+                <div class="evento">onfocus</div>             
+                <div class="evento">onblur</div>
+                <div class="evento">onchange</div>             
+                <div class="evento">onsubmit</div>
+                <div class="evento">onreset</div>             
+            </div>
+        </div>
+    </article>
+
+    <article id="derecho">
+        <div>
+            <h2 id="titulo">TIPO DE EVENTO</h2>
+            <p id="tipo"></p>
+        </div>
+        <div>
+            <h2>NOMBRE DE EVENTO: <span id="nombre"></span></h2>
+            
+            <p id="concepto"></p>
+        </div>
+        <div>
+            <h2>SINTAXIS</h2>
+            <h3 class="rojo">HTML</h3>
+            <p id="sintaxisHTML"></p>
+            <h3 class="rojo">JAVASCRIPT</h3>
+            <p id="sintaxisJS"></p>
+            <h3 class="rojo">USANDO EL MÉTODO addEventListener():</h3>
+            <p id="sintaxisListener"></p>
+        </div>
+    </article>
+</section>    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usabilidad</title>
+    <script>
+        window.addEventListener("load", ()=>{
+            titulos = ["Usabilidad", "Eficacia", "Eficiencia", "Satisfaccion", "Cantidad", "Exactitud", "Temporal", "Humana", "Costo", "Aceptabilidad", "Comodidad"];
+            
+            descripcion = ["La usabilidad web es el grado de facilidad de uso que tiene una página web para los visitantes que entran e interactúan con ella. Una web con una buena usabilidad es aquella que permite a los usuarios una interacción sencilla, intuitiva, agradable y segura.",
+            "Precisión y la plenitud con las que los usuarios alcanzan los objetivos especificados. A esta idea van asociadas la facilidad de aprendizaje (en la medida en que este sea lo más amplio y profundo posible), la tasa de errores del sistema y la facilidad del sistema para ser recordado (que no se olviden las funcionalidades ni sus procedimientos).",
+            "Recursos empleados en relación con la precisión y plenitud con que los usuarios alcanzan los objetivos especificados. A esta idea van asociadas la facilidad de aprendizaje (en tanto que supone un coste en tiempo; igualmente, si se requiere un acceso continuo a los mecanismos de ayuda del sistema), la tasa de errores del sistema y la facilidad del sistema para ser recordado (una asimilación inapropiada puede traducirse en errores de usuario).",
+            "Ausencia de incomodidad y la actitud positiva en el uso del producto. Se trata, pues, de un factor subjetivo.",
+            "Se refiere a la cantidad de la salida con relación a un nivel de blanco especificado",
+            "Se refiere a la calidad de la salida",
+            "Es el tiempo que lleva realizar cualquier tarea.",
+            "Es el trabajo que le cuesta al usuario entender y llevar a cabo cualquier tarea con el sistema.",
+            "Reduccion de costos de aprendizaje, lo que supone reducciond de costos de mantenimiento y de asistencia/ayuda al usuario",
+            "El aumento de la tasa de conversion de visitantes a clientes del sitio web",
+            "La facilidad y rapidez con que el usuario encuentra lo que busca o realiza las acciones."
+            ];
+        });
+
+        function muestraDatos(n){
+            document.getElementById("titulo").innerHTML = titulos[n];
+            document.getElementById("texto").innerHTML = descripcion[n];
+        }
+    </script>
+    <style>
+        header{
+            background-color: rgb(192, 236, 232);
+            color: rgb(98, 98, 98);
+            text-align: right;
+            padding: 0.7em;
+        }
+        header h1{
+            margin:0;
+            font-size: 50px;
+            font-weight: normal;
+        }
+        .contenedor{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+       #derecho{
+            /* visibility: hidden; */
+            flex: 1;
+            border: 1px solid lightskyblue;
+            padding: 0.5em;
+            text-align: justify;
+        }
+        #derecho h2{
+            color: rgb(19, 189, 189);
+            font-size: 30px;
+        }
+        p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Usabilidad WEB</h1>
+</header>
+<section class="contenedor">
+    <article class="izquierda">
+        <img src="./imagen/esquema-usabilidad.jpeg" usemap="#image-map">
+        <map name="image-map">
+            <area alt="Usabilidad" href="javascript:void()" title="Usabilidad" coords="158,207,11,157" shape="rect" onclick="muestraDatos(0);">
+            <area target="" alt="Eficacia" href="javascript:void()" title="Eficacia" coords="266,36,385,86" shape="rect" onclick="muestraDatos(1);">
+            <area target="" alt="Eficiencia" href="javascript:void()" title="Eficiencia" coords="267,139,400,192" shape="rect" onclick="muestraDatos(2);">
+            <area target="" alt="Satisfaccion" href="javascript:void()" title="Satisfaccion" coords="252,284,411,334" shape="rect" onclick="muestraDatos(3);">
+            <area target="" alt="Cantidad" href="javascript:void()" title="Cantidad" coords="490,18,641,57" shape="rect" onclick="muestraDatos(4);">
+            <area target="" alt="Exactitud" href="javascript:void()" title="Exactitud" coords="491,61,641,105" shape="rect" onclick="muestraDatos(5);">
+            <area target="" alt="Temporal" href="javascript:void()" title="Temporal" coords="490,113,641,159" shape="rect" onclick="muestraDatos(6);">
+            <area target="" alt="Humana" href="javascript:void()" title="Humana" coords="490,162,641,205" shape="rect" onclick="muestraDatos(7);">
+            <area target="" alt="Costo" href="javascript:void()" title="Costo" coords="489,208,640,255" shape="rect" onclick="muestraDatos(8);">
+            <area target="" alt="Aceptabilidad" href="javascript:void()" title="Aceptabilidad" coords="488,262,651,312" shape="rect" onclick="muestraDatos(9);">
+            <area target="" alt="Comodidad" href="javascript:void()" title="Comodidad" coords="487,317,651,358" shape="rect" onclick="muestraDatos(10);">
+        </map>
+    </article>
+    <article id="derecho">
+        <h2 id="titulo"></h2>
+        <p id="texto"></p>
+    </article>
+</section>    
+</body>
+</html>

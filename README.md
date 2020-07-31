@@ -17,6 +17,7 @@
 | 3   | Accesibilidad    | Realizacion de una tarjeta donde se puedan cambiar acpectos como colores, tamaño de letra, etc.. para dar respuesta a distintos aspectos relacionados con la accesibilidad<br/>- Contraste: color de letra y fondo.<br/>- Tamaño de letra: desde 1 hasta 7.<br/>- Espacio entre letras: para aumentar la legilibilidad del texto.  |
 | 4   | DOM              | Ejercicio en el que se usa mapeado de imagenes (HTML) junto con eventos y arrays (JS) para mostrar distintas definiciones relacionadas con el DOM                                                                                                                                                                                  |
 | 5   | EVENTOS          | Ejercicio en el que se usa mapeado de imagenes (HTML) junto con eventos y arrays (JS) para mostrar distintas de los events que encontramos en JS                                                                                                                                                                                   |
+| 6   | Usabilidad       | Ejercicio en el que se usa mapeado de imagenes (HTML) junto con eventos y arrays (JS) para mostrar definiciones relacionadas con Usabilidad                                                                                                                                                                                        |
 |     |
 
 ## :man: Autor

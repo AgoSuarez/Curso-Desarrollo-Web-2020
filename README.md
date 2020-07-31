@@ -18,6 +18,7 @@
 | 4   | DOM              | Ejercicio en el que se usa mapeado de imagenes (HTML) junto con eventos y arrays (JS) para mostrar distintas definiciones relacionadas con el DOM                                                                                                                                                                                  |
 | 5   | EVENTOS          | Ejercicio en el que se usa mapeado de imagenes (HTML) junto con eventos y arrays (JS) para mostrar distintas de los events que encontramos en JS                                                                                                                                                                                   |
 | 6   | Usabilidad       | Ejercicio en el que se usa mapeado de imagenes (HTML) junto con eventos y arrays (JS) para mostrar definiciones relacionadas con Usabilidad                                                                                                                                                                                        |
+| 7   | Accesibilidad    | Ejercicio en el que se usa mapeado de imagenes (HTML) junto con eventos y arrays (JS) para mostrar definiciones relacionadas con Accesibilidad                                                                                                                                                                                     |
 |     |
 
 ## :man: Autor

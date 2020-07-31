@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad</title>
+    <style>
+        header{
+            background-color: rgb(192, 236, 232);
+            color: rgb(98, 98, 98);
+            text-align: right;
+            padding: 0.7em;
+        }
+        header h1{
+            margin:0;
+            font-size: 50px;
+            font-weight: normal;
+        }
+        .contenedor{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+       #derecho{
+            /* visibility: hidden; */
+            flex: 1;
+            border: 1px solid lightskyblue;
+            padding: 0.5em;
+            text-align: justify;
+        }
+        #derecho h2{
+            color: rgb(17, 160, 160);
+            font-size: 30px;
+        }        
+        #derecho h3{
+            color: rgb(19, 189, 189);
+            font-size: 26px;
+        }
+        p{
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        const tipo = {"visual0":"Discapacidad Visual - Ceguera",
+                    "visual1":"Discapacidad Visual - Ceguera Parcial",
+                    "visual2":"Discapacidad Visual - Daltonismo",
+                    "audio0" : "Discapacidad Auditiva - Sordera"};
+        
+        const visual0 = ["Todo contenido no textual que se presenta al usuario tiene una alternativa textual que   cumple el mismo propósito, excepto en las situaciones enumeradas a continuación.",
+                        "Para contenido sólo audio grabado y contenido sólo vídeo grabado, se cumple lo siguiente, excepto cuando el audio o el vídeo es un contenido multimedia alternativo al texto y está claramente identificado como tal:<ul><li>Sólo audio grabado: Se proporciona una alternativa para los medios tempodependientes que presenta información equivalente para el contenido sólo audio grabado.</li><li>Sólo vídeo grabado: Se proporciona una alternativa para los medios tempodependientes o se proporciona una pista sonora que presenta información equivalente al contenido del medio de sólo vídeo grabado.</li",
+                        "Se proporciona una alternativa para los medios tempodependientes o una audiodescripción para el contenido de vídeo grabado en los multimedia sincronizados, excepto cuando ese contenido es un contenido multimedia alternativo al texto y está claramente identificado como tal.",
+                        "Cuando la secuencia en que se presenta el contenido afecta a su significado, se puede determinar por software la secuencia correcta de lectura.",
+                        "Si es posible mover el foco a un componente de la página usando una interfaz de teclado, entonces el foco se puede quitar de ese componente usando sólo la interfaz de teclado y, si se requiere algo más que las teclas de dirección o de tabulación, se informa al usuario el método apropiado para mover el foco.",
+                        "Si se puede navegar secuencialmente por una página web y la secuencia de navegación afecta su significado o su operación, los componentes que pueden recibir el foco lo hacen en un orden que preserva su significado y operabilidad.",
+                        "El propósito de cada enlace puede ser determinado con sólo el texto del enlace o a través del texto del enlace sumado al contexto del enlace determinado por software, excepto cuando el propósito del enlace resultara ambiguo para los usuarios en general.",
+                        "El idioma predeterminado de cada página web puede ser determinado por software.",
+                        "Cuando cualquier componente recibe el foco, no inicia ningún cambio en el contexto.",
+                        "El cambio de estado en cualquier componente de la interfaz de usuario no provoca automáticamente un cambio en el contexto a menos que el usuario haya sido advertido de ese comportamiento antes de usar el componente.",
+                        "Si se detecta automáticamente un error en la entrada de datos, el elemento erróneo es identificado y el error se describe al usuario mediante un texto.",
+                        "Se proporcionan etiquetas o instrucciones cuando el contenido requiere la introducción de datos por parte del usuario.",
+                        "En los contenidos implementados mediante el uso de lenguajes de marcas, los elementos tienen las etiquetas de apertura y cierre completas; los elementos están anidados de acuerdo a sus especificaciones; los elementos no contienen atributos duplicados y los ID son únicos, excepto cuando las especificaciones permitan estas características.",
+                        "Para todos los componentes de la interfaz de usuario (incluyendo pero no limitado a: elementos de formulario, enlaces y componentes generados por scripts), el nombre y la función pueden ser determinados por software; los estados, propiedades y valores que pueden ser asignados por el usuario pueden ser especificados por software; y los cambios en estos elementos se encuentran disponibles para su consulta por las aplicaciones de usuario, incluyendo las ayudas técnicas.",
+                        "Se proporciona una audiodescripción para todo el contenido de vídeo grabado dentro de contenido multimedia sincronizado."
+        ];
+        
+        const visual1 = ["La presentación visual de texto e imágenes de texto tiene una relación de contraste de, al menos, 4.5:1, excepto en los siguientes casos:<ul><li>Textos grandes: Los textos de gran tamaño y las imágenes de texto de gran tamaño tienen una relación de contraste de, al menos, 3:1.</li><li>Incidental: Los textos o imágenes de texto que forman parte de un componente inactivo de la interfaz de usuario, que son simple decoración, que no resultan visibles para nadie o forman parte de una imagen que contiene otros elementos visuales significativos, no tienen requisitos de contraste.</li><li>Logotipos: El texto que forma parte de un logo o nombre de marca no tiene requisitos de contraste mínimo.</li></ul>",
+        "A excepción de los subtítulos y las imágenes de texto, todo el texto puede ser ajustado sin ayudas técnicas hasta un 200 por ciento sin que se pierdan el contenido o la funcionalidad.",
+        "Si con las tecnologías que se están utilizando se puede conseguir la presentación visual deseada, se utiliza texto para transmitir la información en vez de imágenes de texto, excepto en los siguientes casos:<ul><li>Configurable: La imagen de texto es visualmente configurable según los requisitos del usuario.</li><li>Esencial: Una forma particular de presentación del texto resulta esencial para la información que se transmite.</li></ul>",
+        "Los mecanismos de navegación que se repiten en múltiples páginas web dentro de un conjunto de páginas web aparecen siempre en el mismo orden relativo cada vez que se repiten, a menos que el cambio sea provocado por el propio usuario. "
+        ]
+        const visual2 = ["El color no se usa como único medio visual para transmitir la información, indicar una acción, solicitar una respuesta o distinguir un elemento visual.",
+        "La presentación visual de texto e imágenes de texto tiene una relación de contraste de, al menos, 4.5:1, excepto en los siguientes casos:<ul><li>Textos grandes: Los textos de gran tamaño y las imágenes de texto de gran tamaño tienen una relación de contraste de, al menos, 3:1.</li><li>Incidental: Los textos o imágenes de texto que forman parte de un componente inactivo de la interfaz de usuario, que son simple decoración, que no resultan visibles para nadie o forman parte de una imagen que contiene otros elementos visuales significativos, no tienen requisitos de contraste.</li><li>Logotipos: El texto que forma parte de un logo o nombre de marca no tiene requisitos de contraste mínimo.</li></ul>"
+        ];
+        const audio0 = ["Para contenido sólo audio grabado y contenido sólo vídeo grabado, se cumple lo siguiente, excepto cuando el audio o el vídeo es un contenido multimedia alternativo al texto y está claramente identificado como tal:<ul><li>Sólo audio grabado: Se proporciona una alternativa para los medios tempodependientes que presenta información equivalente para el contenido sólo audio grabado.</li><li>Sólo vídeo grabado: Se proporciona una alternativa para los medios tempodependientes o se proporciona una pista sonora que presenta información equivalente al contenido del medio de sólo vídeo grabado.</li></ul>",
+        "Se proporcionan subtítulos para el contenido de audio grabado dentro de contenido multimedia sincronizado, excepto cuando la presentación es un contenido multimedia alternativo al texto y está claramente identificado como tal.",
+        "Si el audio de una página web suena automáticamente durante más de 3 segundos, se proporciona ya sea un mecanismo para pausar o detener el audio, o un mecanismo para controlar el volumen del sonido que es independiente del nivel de volumen global del sistema.",
+        "Se proporcionan subtítulos para todo el contenido de audio en directo de los multimedia sincronizados."
+        ]
+
+        function muestraDatos(area){
+            //console.log(area.title);
+            discapacidad = area.dataset.tipo;
+            indice = area.dataset.index;
+            document.getElementById("titulo").innerHTML = tipo[discapacidad];
+            document.getElementById("subtitulo").innerHTML = area.title;
+            const detalle = eval(discapacidad);
+            document.getElementById("texto").innerHTML = detalle[indice];
+        } 
+    </script>
+</head>
+<body>
+<header>
+    <h1>Accesibilidad WEB (A / AA)</h1>
+</header>
+<section class="contenedor">
+    <article class="izquierda">
+        <img src="esquema.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="" alt="Contenido no textual (A)" title="Contenido no textual (A)" href="#" coords="27,188,128,235" shape="rect" data-tipo="visual0" data-index=0 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Sólo audio y sólo vídeo (grabado) (A)" title="Sólo audio y sólo vídeo (grabado) (A)" href="#" coords="28,241,131,291" shape="rect" data-tipo="visual0" data-index=1 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Audiodescripción o Medio Alternativo (grabado) (A)" title="Audiodescripción o Medio Alternativo (grabado) (A)" href="#" coords="30,298,131,347" shape="rect" data-tipo="visual0" data-index=2 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Secuencia significativa (A)" title="Secuencia significativa (A)" href="#" coords="27,354,130,403" shape="rect" data-tipo="visual0" data-index=3 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Sin trampas para el foco del teclado (A)" title="Sin trampas para el foco del teclado (A)" href="#" coords="29,411,130,460" shape="rect" data-tipo="visual0" data-index=4 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Orden del foco (A)" title="Orden del foco (A)" href="#" coords="136,190,236,236" shape="rect" data-tipo="visual0" data-index=5 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Propósito de los enlaces (en contexto) (A)" title="Propósito de los enlaces (en contexto) (A)" href="#" coords="136,242,235,290" shape="rect" data-tipo="visual0" data-index=6 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Idioma de la página (A)" title="Idioma de la página (A)" href="#" coords="136,301,235,347" shape="rect" data-tipo="visual0" data-index=7 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Al recibir el foco (A)" title="Al recibir el foco (A)" href="#" coords="135,356,235,403" shape="rect" data-tipo="visual0" data-index=8 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Al recibir entradas (A)" title="Al recibir entradas (A)" href="#" coords="136,413,235,458" shape="rect" data-tipo="visual0" data-index=9 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Identificación de errores (A)" title="Identificación de errores (A)" href="#" coords="242,189,343,236" shape="rect" data-tipo="visual0" data-index=10 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Etiquetas o instrucciones (A)" title="Etiquetas o instrucciones (A)" href="#" coords="242,245,343,290" shape="rect" data-tipo="visual0" data-index=11 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Procesamiento (A)" title="Procesamiento (A)" href="#" coords="242,299,341,348" shape="rect" data-tipo="visual0" data-index=12 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Nombre, función, valor (A)" title="Nombre, función, valor (A)" href="#" coords="241,357,342,402" shape="rect" data-tipo="visual0" data-index=13 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="descripción (grabado) (AA)" title="descripción (grabado) (AA)" href="#" coords="241,413,342,463" shape="rect" data-tipo="visual0" data-index=14 data-conformidad="AA" onclick="muestraDatos(this);">
+            <area target="" alt="Contraste (mínimo) (AA)" title="Contraste (mínimo) (AA)" href="#" coords="378,186,481,236" shape="rect" data-tipo="visual1" data-index=0 data-conformidad="AA" onclick="muestraDatos(this);">
+            <area target="" alt="Cambio de tamaño del texto (AA)" title="Cambio de tamaño del texto (AA)" href="#" coords="379,244,481,291" shape="rect" data-tipo="visual1" data-index=1 data-conformidad="AA" onclick="muestraDatos(this);">
+            <area target="" alt="Imágenes de texto (AA)" title="Imágenes de texto (AA)" href="#" coords="380,301,483,348" shape="rect" data-tipo="visual1" data-index=2 data-conformidad="AA" onclick="muestraDatos(this);">
+            <area target="" alt="Navegación coherente (AA)" title="Navegación coherente (AA)" href="#" coords="379,354,482,405" shape="rect" data-tipo="visual1" data-index=3 data-conformidad="AA" onclick="muestraDatos(this);">
+            <area target="" alt="Uso del color (A)" title="Uso del color (A)" href="#DALTO" coords="165,484,266,531" shape="rect" data-tipo="visual2" data-index=0 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Contraste (mínimo) (AA)" title="Contraste (mínimo) (AA)" href="#" coords="273,485,372,532" shape="rect" data-tipo="visual2" data-index=1 data-conformidad="AA" onclick="muestraDatos(this);">
+            <area target="" alt="Sólo audio y sólo vídeo (grabado) (A)" title="Sólo audio y sólo vídeo (grabado) (A)" href="#" coords="542,188,648,236" shape="rect" data-tipo="audio0" data-index=0 data-conformidad="A" onclick="muestraDatos(this);" >
+            <area target="" alt="Subtítulos (grabados)(A)" title="Subtítulos (grabados)(A)" href="#" coords="545,242,646,293" shape="rect" data-tipo="audio0" data-index=1 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Control del audio (A)" title="Control del audio (A)" href="#" coords="543,300,646,350" shape="rect" data-tipo="audio0" data-index=2 data-conformidad="A" onclick="muestraDatos(this);">
+            <area target="" alt="Subtítulos (en directo) (AA)" title="Subtítulos (en directo) (AA)" href="#" coords="544,355,649,405" shape="rect" data-tipo="audio0" data-index=3 data-conformidad="A" onclick="muestraDatos(this);">
+        </map>
+
+    </article>
+    <article id="derecho">
+        <h2 id="titulo"></h2>
+        <h3 id="subtitulo"></h3>
+        <p id="texto"></p>
+    </article>
+</section>    
+</body>
+</html>
